@@ -39,6 +39,7 @@ struct GcdParameters {
     m: u64,
 }
 
+
 async fn post_gcd(form: web::Form<GcdParameters>) -> HttpResponse {
     if form.n == 0 || form.m == 0 {
         return HttpResponse::BadRequest()
